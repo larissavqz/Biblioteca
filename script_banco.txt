@@ -1,0 +1,82 @@
+ CREATE TABLE USUARIOS
+ (
+     cpf varchar(12) PRIMARY KEY AUTOINCREMENT,
+     nome varchar(255),
+	 data_nascimento date,
+     Endereco varchar(255),
+	 cep varchar(9),
+	 senha varchar(15),
+     email varchar(255),
+	 ctps varchar(12) PRIMARY KEY AUTOINCREMENT,
+     cargo varchar(255)
+ );
+
+ 
+
+ 
+  CREATE TABLE ENTREGA_FORNECEDOR
+ (
+     id_ef integer PRIMARY KEY AUTOINCREMENT,
+     data date,
+	 quantidade integer,
+	 fornecedor varchar(255)
+ );
+ 
+   CREATE TABLE LIVRO
+ (
+     id_livro integer PRIMARY KEY AUTOINCREMENT,
+     autor varchar2(255),
+	 data_publicacao date,
+	 editora varchar2(255),
+	 nome varchar2(255),
+	 genero varchar2(255)
+ );
+
+ 
+  CREATE TABLE ACERVO
+ (
+     id_acervo integer PRIMARY KEY AUTOINCREMENT,
+	 id_livro integer,
+     posicao varchar2(5),
+	 quantidade_total integer,
+	 quantidade_alugada integer,
+	 CONSTRAINT fk_acervoLivro FOREIGN KEY (id_livro) REFERENCES LIVRO (id_livro)
+ );
+
+   CREATE TABLE LIVROS_COPIADOS
+ (
+     
+	 id_livro integer,
+	 quantidade_total integer,
+	 quantidade_alugada integer,
+	 data_copia date,
+	 CONSTRAINT fk_copiaLivro FOREIGN KEY (id_livro) REFERENCES LIVRO (id_livro)
+ );
+ 
+ 
+    CREATE TABLE EMPRESTIMO
+ (
+     id_emprestimo integer PRIMARY KEY AUTOINCREMENT,
+	 id_usuario integer,
+	 id_livro integer,
+	 data_retorno date,
+	 data_retirada date,
+	 data_est_retorno date
+	 CONSTRAINT fk_empLivro FOREIGN KEY (id_livro) REFERENCES LIVRO (id_livro),
+	 CONSTRAINT fk_empUsu FOREIGN KEY (id_usuario) REFERENCES USUARIO (id_usuario)
+ );
+ 
+ 
+   CREATE TABLE MULTAS
+ (
+     
+	 id_emprestimo integer,
+	 duracao integer,
+	 data_aplicacao date,
+	 motivo varchar(255),
+	 CONSTRAINT fk_multaEmp FOREIGN KEY (id_emprestimo) REFERENCES EMPRESTIMO (id_emprestimo)
+ );
+ 
+ 
+ 
+ 
