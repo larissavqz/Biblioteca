@@ -12,36 +12,40 @@
 		<link href="bootstrap.min.css" rel="stylesheet" type="text/css" />		
 		<script src="bootstrap.min.js" type="text/javascript"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Biblioteca - Cadastrar Livro</title>
+		<title>Biblioteca - Cadastrar Usuário</title>
 	</head>
 	<body>
 		<?php include 'menu.php' ?>
 		<br><br><br>
 		<center>
-			<form style="width: 300px;" method="POST" action="cad_livro.php">
+			<form style="width: 300px;" method="POST" action="cad_user.php">
 			  <div class="form-group">
 				<label for="nome">Nome</label>
 				<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
 			  </div>
 			  <div class="form-group">
-				<label for="autor">Autor</label>
-				<input type="text" class="form-control" id="autor" name="autor" placeholder="Autor">
+				<label for="cpf">CPF</label>
+				<input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF">
 			  </div>
 			  <div class="form-group">
-				<label for="genero">Gênero</label>
-				<input type="text" class="form-control" id="genero" name="genero" placeholder="Gênero">
+				<label for="cep">CEP</label>
+				<input type="text" class="form-control" id="cep" name="cep" placeholder="CEP">
 			  </div>
 			  <div class="form-group">
-				<label for="data">Data Publicação</label>
+				<label for="endereco">Endereço</label>
+				<input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço">
+			  </div>
+			  <div class="form-group">
+				<label for="data">Data Nascimento</label>
 				<input type="date" class="form-control" id="data" name="data" >
 			  </div>
 			  <div class="form-group">
-				<label for="editora">Editora</label>
-				<input type="text" class="form-control" id="editora" name="editora" placeholder="Editora">
+				<label for="senha">Senha</label>
+				<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
 			  </div>
 			  <div class="form-group">
-				<label for="posicao">Posição</label>
-				<input type="text" class="form-control" id="posicao" name="posicao" placeholder="Posição">
+				<label for="posicao">E-mail</label>
+				<input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
 			  </div>
 			  <button type="submit" class="btn btn-primary">Cadastrar</button>
 			</form>	
