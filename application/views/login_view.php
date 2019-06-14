@@ -20,7 +20,7 @@
 				</div>
 					<button type="button" id="entrar" name="entrar" onclick="validarlogin()"class="btn btn-primary">Login</button>					
 			</form>
-			<button type="button" id="cadastrar" class="btn btn-secondary"><a href="<?= base_url().'cadastro'?>">Cadastre-se</a></button>
+			<button type="button" id="cadastrar" class="btn btn-secondary"><a href="<?= base_url().'cadastrar-usuario'?>">Cadastre-se</a></button>
 		</center>
 	</body>
 	<script src="<?= base_url().'assets/js/bootstrap/bootstrap.min.js'?>" type="text/javascript"></script>

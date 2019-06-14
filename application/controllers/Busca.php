@@ -1,15 +1,48 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Busca extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('busca_view');
+		if(!isset($this->session->userdata['logged_in']['cpf']))
+		{
+			$this->load->view('login_view');
+		} else {
+			$this->load->view('busca_view');
+		}		
     }
     
-    public function checarlogin()
+    public function busca_livro()
 	{
-        
+		$filtro = $_POST['filtro'];
+		$texto = $_POST['texto'];
+		if( is_null($filtro) || empty($filtro) || is_null($texto) || empty($texto) )
+		{
+			echo json_encode($_POST);
+			die();
+		}
+
+		$this->load->model('livro_model');
+		$livros=$this->livro_model->busca_livro($texto, $filtro);
+
+		$array_livros=array();
+		$i=0;
+		foreach($livros as $value)
+		{
+			$array_livros[$i][]=$value['id'];
+			$array_livros[$i][]=$value['titulo'];
+			$array_livros[$i][]=$value['autor'];
+			$array_livros[$i][]=$value['editora'];
+			$array_livros[$i][]=$value['genero'];
+			$array_livros[$i][]=$value['dtpublicacao'];
+			$array_livros[$i][]=$value['secao'];
+			$array_livros[$i][]=$value['qtdisponivel'];
+			$array_livros[$i][]='<button id="aluga'.$value['id'].'">Alugar</button>';
+			$i++;
+		}
+
+		echo json_encode($array_livros);
+		die();
 	}
 }

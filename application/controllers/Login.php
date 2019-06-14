@@ -48,11 +48,16 @@ class Login extends CI_Controller {
                     $this->session->userdata['logged_in']['ctps'] = $dados_func['ctps'];
                     $this->session->userdata['logged_in']['cargo'] = $dados_func['cargo'];
                 }                
-                
-                $this->load->view('busca_view');
+                redirect('pagina-inicial', 'refresh');
             } else {
                 $this->load->view('login_view');
             }	
         }        	
-	}
+    }
+
+    public function logout()
+	{
+        unset($this->session->userdata['logged_in']);
+        $this->load->view('login_view');
+    }
 }

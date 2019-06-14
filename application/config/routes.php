@@ -54,5 +54,12 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['login/autenticacao'] = 'login/checarlogin';
+$route['logout'] = 'login/logout';
+
+$route['pagina-inicial'] = 'busca/index';
+
+$route['cadastrar-usuario'] = 'usuario/index';
+
+$route['cadastrar-livro'] = 'livro/cadastrar_livro';
 
 
