@@ -6,5 +6,10 @@ class Livro extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('cadastro_view');
+	}
+	
+	public function cadastro()
+	{
+		$this->load->view('cadastro_view');
     }
 }

@@ -11,8 +11,11 @@
 		<?php
 		if(isset($this->session->userdata['logged_in']['ctps']))
 		{
-			echo '<li class="nav-item">
+			echo   '<li class="nav-item">
 				  	<a class="nav-link" href="'.base_url().'cadastrar-usuario">Cadastrar Usuário</a>
+					</li>
+					<li class="nav-item">
+				  	<a class="nav-link" href="'.base_url().'cadastrar-administrador">Cadastrar Administrador</a>
 					</li>';
 		}
 		var_dump($this->session->userdata['logged_in']['cpf']);		

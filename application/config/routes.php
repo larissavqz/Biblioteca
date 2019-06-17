@@ -59,6 +59,7 @@ $route['logout'] = 'login/logout';
 $route['pagina-inicial'] = 'busca/index';
 
 $route['cadastrar-usuario'] = 'usuario/index';
+$route['cadastrar-administrador'] = 'usuario/cadastrar_admin';
 
 $route['cadastrar-livro'] = 'livro/cadastrar_livro';
 
