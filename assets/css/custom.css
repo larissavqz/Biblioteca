@@ -7,7 +7,7 @@
 }
 #cadastrar > a{
     color: white;
-    text-decoration: none
+    text-decoration: none;
 }
 
 /* TABLE */
@@ -35,4 +35,9 @@
 }
 #button-busca{
     margin: 4% 0% 4% 0%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }

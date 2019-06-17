@@ -24,6 +24,9 @@
 			<a class="nav-link" href="<?=base_url().'login/logout'?>">Cadastrar Livro</a>
 		</li>
 		<li class="nav-item">
+			<a class="nav-link" href="<?=base_url().'emprestimos'?>">Emprestimos</a>
+		</li>
+		<li class="nav-item">
 			<a class="nav-link" href="<?=base_url().'logout'?>">Logout</a>
 		</li>		  
 	</ul>

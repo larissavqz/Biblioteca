@@ -9,8 +9,14 @@ class Usuario extends CI_Controller {
 	}
 	
 	public function cadastrar_admin()
-	{		
-		$this->load->view('cadastro_admin_view');		
+	{	
+		if ( isset($this->session->userdata['logged_in']['ctps']) )
+		{
+			$this->load->view('cadastro_admin_view');
+		} else {
+			redirect('pagina-inicial', 'refresh');
+		}
+				
 	}
 	
 	public function cadastro()

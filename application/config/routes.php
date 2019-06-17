@@ -63,4 +63,6 @@ $route['cadastrar-administrador'] = 'usuario/cadastrar_admin';
 
 $route['cadastrar-livro'] = 'livro/cadastrar_livro';
 
+$route['emprestimos'] = 'emprestimo/index';
+
 

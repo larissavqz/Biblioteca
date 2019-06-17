@@ -5,7 +5,12 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('login_view');
+        if( !isset($this->session->userdata['logged_in']['ctps']) )
+        {   
+            $this->load->view('login_view');
+        } else {
+            $this->load->view('busca_view');
+        }
     }
     
     public function checarlogin()
