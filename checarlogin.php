@@ -19,7 +19,7 @@
 	$senha = $senha;
 	//$pao="select * from login where cpf = 'admin' and senha = '202cb962ac59075b964b07152d234b70'  exclusao = 'FALSE'";
 	//$tipo=$_SESSION["tipo"];
-	$sql = sprintf("SELECT cpf FROM usuarios WHERE cpf='%s' AND senha='%s'", mysqli_real_escape_string($con, $cpf), mysqli_real_escape_string($con, $senha));
+	$sql = sprintf("SELECT cpf_usuario FROM dados_acesso WHERE cpf_usuario='%s' AND senha='%s'", mysqli_real_escape_string($con, $cpf), mysqli_real_escape_string($con, $senha));
 	$result = mysqli_query($con, $sql);
 	$cont = mysqli_num_rows($result);
 	if ($cont <= 0)

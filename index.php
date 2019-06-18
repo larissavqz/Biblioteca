@@ -21,11 +21,11 @@
 			<form style="width: 300px;" method="POST" action="checarlogin.php">
 			  <div class="form-group">
 				<label for="cpf">CPF</label>
-				<input type="text" class="form-control" id="cpf" name = "cpf" placeholder="CPF">
+				<input type="text" class="form-control" id="cpf" name = "cpf" placeholder="CPF" required>
 			  </div>
 			  <div class="form-group">
 				<label for="senha">Senha</label>
-				<input type="password" class="form-control" id="senha" name="senha" placeholder="Password">
+				<input type="password" class="form-control" id="senha" name="senha" placeholder="Password" required>
 			  </div>
 			  <button type="submit" id="entrar" name="entrar" class="btn btn-primary">Login</button>
 			</form>	

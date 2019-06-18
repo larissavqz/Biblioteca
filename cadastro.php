@@ -25,15 +25,23 @@
 			  </div>
 			  <div class="form-group">
 				<label for="cpf">CPF</label>
-				<input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF">
+				<input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF" maxlength="11">
 			  </div>
 			  <div class="form-group">
 				<label for="cep">CEP</label>
-				<input type="text" class="form-control" id="cep" name="cep" placeholder="CEP">
+				<input type="text" class="form-control" id="cep" name="cep" placeholder="CEP" maxlength="8">
 			  </div>
 			  <div class="form-group">
 				<label for="endereco">Endereço</label>
 				<input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço">
+			  </div>
+			  <div class="form-group">
+				<label for="bairro">Bairro</label>
+				<input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
+			  </div>
+			  <div class="form-group">
+				<label for="numero">Número</label>
+				<input type="text" class="form-control" id="numero" name="numero" placeholder="Número">
 			  </div>
 			  <div class="form-group">
 				<label for="data">Data Nascimento</label>
@@ -46,6 +54,14 @@
 			  <div class="form-group">
 				<label for="posicao">E-mail</label>
 				<input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+			  </div>			  
+			  <div class="form-group">
+				<label for="ctps">CTPS</label>
+				<input type="text" class="form-control" id="ctps" name="ctps" placeholder="CTPS">
+			  </div>			  
+			  <div class="form-group">
+				<label for="cargo">Cargo</label>
+				<input type="text" class="form-control" id="cargo" name="cargo" placeholder="Cargo">
 			  </div>
 			  <button type="submit" class="btn btn-primary">Cadastrar</button>
 			</form>	

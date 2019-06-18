@@ -29,7 +29,7 @@
 					 $opcao = $_POST['opcao'];
 					 switch ($opcao)
 					 {
-						case 1: $sql = "SELECT * FROM livro WHERE nome LIKE '%".$consulta."%'"; break;
+						case 1: $sql = "SELECT * FROM livro WHERE titulo LIKE '%".$consulta."%'"; break;
 						case 2: $sql = "SELECT * FROM livro WHERE editora LIKE '%".$consulta."%'"; break;
 						case 3: $sql = "SELECT * FROM livro WHERE autor LIKE '%".$consulta."%'"; break;
 						case 4: $sql = "SELECT * FROM livro WHERE genero LIKE '%".$consulta."%'"; break;
@@ -38,7 +38,7 @@
 					 $qr = mysqli_query($con, $sql) or die(mysqli_error());
 					 
 					 while($ln = mysqli_fetch_assoc($qr)){
-						echo "<div class='col-12 col-12-xsmall'><b>Nome:      </b>".$ln['nome']."
+						echo "<div class='col-12 col-12-xsmall'><b>Título:      </b>".$ln['titulo']."
 															<br><b>Editora:        </b>".$ln['editora']."
 															<br><b>Autor:         </b>".$ln['autor']."
 															<br><b>Gênero:         </b>".$ln['genero'].

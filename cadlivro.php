@@ -20,8 +20,8 @@
 		<center>
 			<form style="width: 300px;" method="POST" action="cad_livro.php">
 			  <div class="form-group">
-				<label for="nome">Nome</label>
-				<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+				<label for="titulo">Título</label>
+				<input type="text" class="form-control" id="titulo" name="titulo" placeholder="titulo">
 			  </div>
 			  <div class="form-group">
 				<label for="autor">Autor</label>
@@ -40,8 +40,12 @@
 				<input type="text" class="form-control" id="editora" name="editora" placeholder="Editora">
 			  </div>
 			  <div class="form-group">
-				<label for="posicao">Posição</label>
-				<input type="text" class="form-control" id="posicao" name="posicao" placeholder="Posição">
+				<label for="secao">Seção</label>
+				<input type="text" class="form-control" id="secao" name="secao" placeholder="Seção">
+			  </div>
+			  <div class="form-group">
+				<label for="qttotal">Quantidade Total</label>
+				<input type="text" class="form-control" id="qttotal" name="qttotal" placeholder="Quantidade Total">
 			  </div>
 			  <button type="submit" class="btn btn-primary">Cadastrar</button>
 			</form>	

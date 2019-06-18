@@ -16,12 +16,16 @@
 			$editora	= strtoupper ($_POST['editora']);
 			$nome		= strtoupper ($_POST['nome']);
 			$genero		= strtoupper ($_POST['genero']);
+			$secao		= strtoupper ($_POST['secao']);
+			$qttotal	= strtoupper ($_POST['qttotal']);
 			
-			$sql = "insert into livro (autor, data_publicacao, editora, nome, genero) values('$autor',
+			$sql = "insert into livro (autor, dtpublicacao, editora, titulo, genero, secao, qttotal) values('$autor',
 																							 '$data',
 																							 '$editora',
 																							 '$nome',
-																							 '$genero')";
+																							 '$genero',
+																							 '$secao',
+																							 '$qttotal')";
 			if ($conn->query($sql) === TRUE) {?>
 	<script type="text/javascript">
 
