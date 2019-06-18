@@ -42,7 +42,7 @@
 					"searching": false,
 					"order": [[ 0, "asc"]],
 					"columnDefs": [
-						{ "orderable": false, "targets": 8 }
+						{ "orderable": false, "targets": 3 }
 					]
 				});
 			});		

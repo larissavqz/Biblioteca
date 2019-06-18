@@ -21,7 +21,7 @@
 		var_dump($this->session->userdata['logged_in']['cpf']);		
 		?>
 		<li class="nav-item">
-			<a class="nav-link" href="<?=base_url().'login/logout'?>">Cadastrar Livro</a>
+			<a class="nav-link" href="<?=base_url().'cadastrar-livro'?>">Cadastrar Livro</a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="<?=base_url().'emprestimos'?>">Emprestimos</a>

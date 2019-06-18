@@ -5,9 +5,9 @@ class Emprestimo extends CI_Controller {
 
 	public function index()
 	{
-        if( !isset($this->session->userdata['logged_in']['ctps']) )
+        if( !isset($this->session->userdata['logged_in']['cpf']) )
         {   
-            $this->load->view('login_view');
+            redirect('Login', 'refresh');
         } else {
             $this->load->model('emprestimo_model');
             $emprestimo['dados']=$this->emprestimo_model->get_emprestimos($this->session->userdata['logged_in']['cpf']);

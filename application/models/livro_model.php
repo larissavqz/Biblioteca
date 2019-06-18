@@ -22,4 +22,12 @@ class Livro_model extends CI_Model {
         $result=$obj->result_array();
         return $result;
     }
+
+    public function cadastra_livro($titulo, $autor, $editora, $dtpublicacao, $genero, $secao, $qttotal) {
+        
+        $this->load->database('biblioteca');
+
+        $sql="INSERT INTO livro(titulo,autor,editora,dtpublicacao,genero,secao,qttotal,qtalugado) VALUES('".$titulo."','".$autor."','".$editora."','".$dtpublicacao."','".$genero."','".$secao."','".$qttotal."',0);";
+        $this->db->query($sql);
+    }
 }

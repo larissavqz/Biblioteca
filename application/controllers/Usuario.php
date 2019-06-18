@@ -40,5 +40,6 @@ class Usuario extends CI_Controller {
 			$cargo=$_POST['cargo'];
 		}
 		$this->usuario_model->cadastrar($cpf, $dtnascimento, $nome, $email, $senha, $rua, $numero, $bairro, $cep, $ctps, $cargo);
+		redirect('pagina-inicial', 'refresh');
 	}
 }

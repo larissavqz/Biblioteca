@@ -7,7 +7,7 @@ class Busca extends CI_Controller {
 	{
 		if(!isset($this->session->userdata['logged_in']['cpf']))
 		{
-			$this->load->view('login_view');
+			redirect('Login','refresh');
 		} else {
 			$this->load->view('busca_view');
 		}		

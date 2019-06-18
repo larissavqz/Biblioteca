@@ -61,7 +61,7 @@ $route['pagina-inicial'] = 'busca/index';
 $route['cadastrar-usuario'] = 'usuario/index';
 $route['cadastrar-administrador'] = 'usuario/cadastrar_admin';
 
-$route['cadastrar-livro'] = 'livro/cadastrar_livro';
+$route['cadastrar-livro'] = 'livro/index';
 
 $route['emprestimos'] = 'emprestimo/index';
 
